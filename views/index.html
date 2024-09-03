@@ -3,45 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Martínez - Software Developer</title>
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
     <header>
-        <a class="logo">
-            <img class="imgheader" alt="" src="/storage/mw.png">
+        <a class="logo" href="#">
+            <img class="imgheader" alt="Martínez Logo" src="/storage/mw.png">
         </a>
         <nav>
-            <!-- 
-            <a href="#ces" class="navlink">Home</a>
-            <a href="#abou" class="navlink">About</a>
-            <a href="#foo" class="navlink">Menu</a>
-            <a href="#ser" class="navlink">Service</a>
-            <a href="#cont" class="navlink">Contact</a> 
-            -->
+            <ul class="nav-links">
+                <li><a href="#" onclick="loadPage('home')">Home</a></li>
+                <li><a href="#" onclick="loadPage('about')">About Me</a></li>
+                <li><a href="#" onclick="loadPage('portfolio')">Portfolio</a></li>
+            </ul>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <div class="video-container">
-            <video autoplay muted loop id="background-video">
-                <source src="/storage/sesent.mp4" type="video/mp4">
-                
-            </video>
-        </div>
-        <div class="martinez">
-            <h1 >
-               Martínez
-            </h1>
-            <h2>Software Developer</h2>
-
-            <p>I have an outstanding ability to listen to my clients and understand their needs. This allows me to apply my knowledge to deliver products that meet or exceed their expectations. My achievement orientation and attention to detail ensure that every part of the process is excellent and functional.</p>
-
-            <p class="question">What would you like to be called?
-                As the innovative Martinez.</p>
-         
-            
-        </div>
+    <main id="content">
+     
     </main>
+
+    <script>
+      
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        function loadPage(page) {
+            const content = document.getElementById('content');
+
+            if (page === 'home') {
+                content.innerHTML = `
+                    <div class="video-container">
+                        <video autoplay muted loop id="background-video">
+                            <source src="/storage/sesent.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="martinez">
+                        <h1>Martínez</h1>
+                        <h2>Software Developer</h2>
+                        <p>I have an outstanding ability to listen to my clients and understand their needs. This allows me to apply my knowledge to deliver products that meet or exceed their expectations. My achievement orientation and attention to detail ensure that every part of the process is excellent and functional.</p>
+                        <p class="question">How would you like to be called? As the innovative Martínez.</p>
+                    </div>`;
+            } else if (page === 'about') {
+                content.innerHTML = `
+                    <section id="about">
+                        <h2 class="about-title">Something about me</h2>
+                        <p class= "about-p1">I have a strong background in design, which adds a unique touch to my projects. I believe that every project begins with the goal of solving everyday problems. Whenever I start a new personal project, it’s because I’ve connected with an event or experience in my life. As a result, I am always attentive to what people say and to what happens around me daily.</p>  
+
+                        <p class="about-p2">"I enjoy working with databases and developing APIs that interact with the frontend. Since my training as a graphic designer, I've been practicing the art of communication through typography and images. Using programming as a tool allows me to push boundaries, making my work more dynamic and accessible."</p>
+                    </section>
+                    
+                       <div class="video-container1">
+                        <video autoplay muted loop id="background-video">
+                            <source src="/storage/aone.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                     <section class="down">
+                        <h2>Something about me</h2>
+
+                     </section>
+                    `
+                    
+                    
+                    ;
+
+            } else if (page === 'portfolio') {
+                content.innerHTML = `
+                    <section id="portfolio">
+                        <h2>Portfolio</h2>
+                        <p>Explore some of the projects I have worked on that showcase my skills and expertise...</p>
+                    </section>`;
+            }
+        }
+        window.onload = () => loadPage('home');
+    </script>
 </body>
 </html>
