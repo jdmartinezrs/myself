@@ -61,7 +61,7 @@ main {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 300px;
+    height: 400px;
     background: linear-gradient(to left, #000000, #0a0a0a, #141414, #1f1f1f, #292929);
   
 }
@@ -72,9 +72,17 @@ main {
     font-weight: 400;
     font-style: normal;
     font-size: 55px;
-    padding-top:15px ;
+    padding-top: 15px;
     margin-left: 75px;
-}.martinez h2 {
+    transition: color 0.3s ease; /* Añade una transición suave para el cambio de color */
+}
+
+.martinez h1:hover {
+    color: yellow; /* Cambia el color a amarillo */
+    text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
+}
+
+.martinez h2 {
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: normal; 
@@ -86,4 +94,19 @@ main {
     justify-content: center;
     color: white;
     font-size: 21px;
+}
+.martinez img {
+    width: 80px;
+}
+
+.martinez p{
+    padding-top: 30px;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal; 
+    font-style: normal;
+   font-size: 13px;
+   width: 300px;
+   margin-left: 40px;
 }
