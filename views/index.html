@@ -77,6 +77,7 @@ el.addEventListener("click", () => {
                         <p>I have an outstanding ability to listen to my clients and understand their needs. This allows me to apply my knowledge to deliver products that meet or exceed their expectations. My achievement orientation and attention to detail ensure that every part of the process is excellent and functional.</p>
                         <p class="question">How would you like to be called? As the innovative Martínez.</p>
                     </div>`;
+
             } else if (page === 'about') {
                 content.innerHTML = `
                     <section id="about">
@@ -91,10 +92,16 @@ el.addEventListener("click", () => {
                             <source src="/storage/aone.mp4" type="video/mp4">
                         </video>
                     </div>
-
                      <section class="down">
                         <p class="down-words">"Exploring history, especially that of Colombia, provides me with valuable knowledge that drives me to innovate and excel in the present, while also helping me share who I am with others. To stay current, I believe it's essential to learn from history and stay informed about the latest developments."</p>
-
+                            
+                        <div class="logos-about-me">
+                            
+<a href="https://www.linkedin.com/in/juan-david-martinez-rojas-1833902b7/" target="_blank">
+<img class="link" src="/storage/Linkedin.png" alt="Descripción de la imagen" width="300" height="200"></a>
+<a class="canva" target="_blank" href="https://www.canva.com/design/DAGLWWJSlhM/oxpwQLC0nWDlu5_H2GpSAQ/edit">
+<img class="link" src="/storage/canva.png" alt="Descripción de la imagen" width="300" height="200"></a>
+</div>
                      </section>
                     `;
 
@@ -103,7 +110,10 @@ el.addEventListener("click", () => {
                     <section id="portfolio">
                         <h2>Portfolio</h2>
                         <p>Explore some of the projects I have worked on that showcase my skills and expertise...</p>
-                    </section>`;
+                        <div class="contenedor">
+  <img src="/storage/github.png" alt="Descripción de la imagen" width="300" height="200">
+  <img src="/storage/Behance.png" alt="Descripción de la imagen" width="300" height="200">
+                        </section>`;
             }
         }
         window.onload = () => loadPage('home');
