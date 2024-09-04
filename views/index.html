@@ -5,32 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Martínez - Software Developer</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 <body>
     <header>
-        <a class="logo" href="#">
-            <img class="imgheader" alt="Martínez Logo" src="/storage/mw.png">
-        </a>
-        <nav>
+        <div>
+            <a class="logo" href="#">
+                <img class="imgheader" alt="Martínez Logo" src="/storage/mw.png">
+            </a>
+        </div>
+        
+        <div class="caca">
+            <a href="#" class="square">
+                <div class="burgerwrap">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </a>
+        </div> 
+        <nav id="navDis" class="hidden navDisplay">
+            <div class="navInt">
             <ul class="nav-links">
                 <li><a href="#" onclick="loadPage('home')">Home</a></li>
                 <li><a href="#" onclick="loadPage('about')">About Me</a></li>
                 <li><a href="#" onclick="loadPage('portfolio')">Portfolio</a></li>
             </ul>
-            <div class="menu-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        </div>
+            <div class="cerrar">
+            </div>  
         </nav>
     </header>
-
     <main id="content">
-     
     </main>
-
     <script>
-      
+
+const el = document.querySelector(".square");
+const navD = document.getElementById("navDis");
+
+el.addEventListener("click", () => {
+  // Alternar la clase 'hidden' para mostrar/ocultar el elemento
+  if (navD.classList.contains("hidden")) {
+    navD.classList.remove("hidden");
+    navD.classList.add("animate__animated", "animate__bounceInDown");
+  } else {
+    navD.classList.add("hidden");
+    navD.classList.remove("animate__animated", "animate__bounceInDown");
+  }
+});
         function toggleMenu() {
             const navLinks = document.querySelector('.nav-links');
             navLinks.classList.toggle('active');
@@ -68,13 +93,10 @@
                     </div>
 
                      <section class="down">
-                        <h2>Something about me</h2>
+                        <p class="down-words">"Exploring history, especially that of Colombia, provides me with valuable knowledge that drives me to innovate and excel in the present, while also helping me share who I am with others. To stay current, I believe it's essential to learn from history and stay informed about the latest developments."</p>
 
                      </section>
-                    `
-                    
-                    
-                    ;
+                    `;
 
             } else if (page === 'portfolio') {
                 content.innerHTML = `
