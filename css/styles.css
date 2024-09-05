@@ -19,9 +19,6 @@ header {
     justify-content: space-between;
     min-height: 90px;
     background: linear-gradient(to left, #000000, #0a0a0a, #141414, #1f1f1f, #292929, #3b0b0b 40%, #5a1a1a 60%, #003366);
-
-
-
     align-items: center;
     padding: 5px;
     position: sticky;
@@ -167,7 +164,7 @@ main {
     font-optical-sizing: auto;
     font-weight: normal; 
     font-style: normal;
-   font-size: 13px;
+    font-size: 13px;
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 40px;
@@ -345,3 +342,22 @@ main {
     flex-direction:row;
     margin-top:20px;
   }
+
+
+.portfolio{
+
+}
+
+
+.title-portfolio{
+  color: white;
+  padding: 40px;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  background: linear-gradient(to left, #000000, #0a0a0a, #141414, #1f1f1f, #292929);
+  font-optical-sizing: auto;
+  font-weight: normal; 
+  font-style: normal;
+  font-size: 21px;
+
+}
