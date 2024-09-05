@@ -106,14 +106,30 @@ el.addEventListener("click", () => {
                     `;
 
             } else if (page === 'portfolio') {
+                
                 content.innerHTML = `
-                    <section id="portfolio">
+
+                    <section class="portfolio">
+                        <div class="contenedor-portfolio">
                         <h2 class="title-portfolio">Portfolio</h2>
-                        <p>Explore some of the projects I have worked on that showcase my skills and expertise...</p>
-                        <div class="contenedor">
-  <img src="/storage/github.png" alt="Descripción de la imagen" width="300" height="200">
-  <img src="/storage/Behance.png" alt="Descripción de la imagen" width="300" height="200">
-                        </section>`;
+                        <p class="parrafo">Explore some of the projects I have worked on that showcase my skills and expertise...</p>
+                        
+
+<div class="git">
+  <a class="github" target="_blank" href="https://github.com/jdmartinezrs">
+ <img src="/storage/github.png" alt="Descripción de la imagen" width="300" height="200"> 
+ <p>Here you can check out my software development projects.</p>
+ </div>
+
+ <div class="behance">
+    <a class="behance" target="_blank" href="https://www.behance.net/davidrojas51">
+    <img src="/storage/Behance.png" alt="Descripción de la imagen" width="300" height="200">
+    <p>Here you can check out my Graphic Design and 3D projects.</p>
+</div>
+</div> 
+  </section>
+</section>`;
+
             }
         }
         window.onload = () => loadPage('home');

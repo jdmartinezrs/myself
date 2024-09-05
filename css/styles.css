@@ -316,9 +316,9 @@ main {
   }
  
   .contenedor img {
-    width: 80%; /* La imagen ocupará el 100% del ancho del contenedor */
-    height: auto; /* La altura se ajustará proporcionalmente */
-    object-fit: cover; /* Recorta la imagen para que cubra todo el contenedor */
+    width: 80%; 
+    height: auto; 
+    object-fit: cover; 
   }
 
   .down img{
@@ -326,6 +326,11 @@ main {
     height: auto;
   }
 
+  .contenedor-portfolio{
+    width: 100%;
+    
+    background: linear-gradient(to left, #000000, #0a0a0a, #141414, #1f1f1f, #292929);
+  }
   /* .canva{
     width: 50%;
     height: auto;
@@ -344,20 +349,72 @@ main {
   }
 
 
-.portfolio{
-
-}
-
 
 .title-portfolio{
   color: white;
   padding: 40px;
   color: white;
   font-family: "Open Sans", sans-serif;
-  background: linear-gradient(to left, #000000, #0a0a0a, #141414, #1f1f1f, #292929);
   font-optical-sizing: auto;
   font-weight: normal; 
   font-style: normal;
   font-size: 21px;
+}
+
+
+.parrafo{
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal; 
+  font-style: normal;
+  padding: 40px;
+}
+
+
+.behance{
+  
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal; 
+  font-style: normal;
+  padding: 40px;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+}
+
+.behance img{
+  width: auto;  width: 100%;
+  height: 120px;
+}
+
+.behance p{
+  
+margin-top: 30px;
 
 }
+
+
+
+.git{
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.git p{
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal; 
+  font-style: normal;
+  padding: 40px;
+  font-size: 13px;
+
+}
+.git img{
+  width: auto;
+}
+
